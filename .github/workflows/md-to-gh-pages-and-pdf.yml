@@ -85,4 +85,4 @@ jobs:
         with:
           tag_name: latest
           name: Latest CV
-          files: cv.pdf
+          files: federico-ferretti-cv.pdf

@@ -6,7 +6,7 @@ Software Engineer **.NET** & **NodeJS** specializzato nella gestione di architet
 
 [Email](mailto:ferrettifederico1990@gmail.com) / [LinkedIn](https://www.linkedin.com/in/federicoferretti) / [GitHub](https://github.com/ferrets6)
 
-📎 Scarica CV [in PDF](https://github.com/ferrets6/cvmd/releases/download/latest/cv.pdf)
+📎 Scarica CV [in PDF](https://github.com/ferrets6/cvmd/releases/download/latest/federico-ferretti-cv.pdf)
 
 
 ## 🛠️ Competenze Tecniche
