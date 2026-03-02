@@ -67,7 +67,7 @@ jobs:
         env:
           PAGE_URL: ${{ needs.deploy.outputs.url }}
         run: |
-          sed -i "s|📎 Download this CV \[as a PDF\]([^)]*)|🌐 Check this CV online at \[GitHub Pages\](${PAGE_URL%/})|" README.md
+          sed -i "s|📎 Scarica CV \[in PDF\]([^)]*)|🌐 Link al mio \[CV online\](${PAGE_URL%/})|" README.md
 
       - name: Convert to PDF
         env:
