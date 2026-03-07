@@ -31,9 +31,9 @@ At every commit into the `main` branch, everything will be rebuilt and updated.
 python setup.py --crop
 ```
 
-**Social sharing image (og:image)** — `setup.py` automatically generates `assets/og-image.png`, a 1200×630 image used when your CV is shared on LinkedIn, Twitter/X, iMessage, etc. It places your circular profile photo centred on a gradient background. This requires Pillow and runs together with `--crop`.
+**Social sharing image (og:image)** — `setup.py` automatically generates `assets/og-image.jpg`, a 1200×630 image used when your CV is shared on LinkedIn, Twitter/X, iMessage, etc. It places your circular profile photo centred on a gradient background. This requires Pillow and runs together with `--crop`.
 
-If you'd rather use a custom image (e.g. a banner you designed in Canva or Figma), just place it as `assets/og-image.png` before running setup — it will be detected and the auto-generation skipped. To regenerate the auto image later, delete `og-image.png` and re-run:
+If you'd rather use a custom image (e.g. a banner you designed in Canva or Figma), just place it as `assets/og-image.jpg` before running setup — it will be detected and the auto-generation skipped. To regenerate the auto image later, delete `og-image.jpg` and re-run:
 
 ```bash
 python setup.py --crop
@@ -59,5 +59,29 @@ Good places to find themes: [jekyllthemes.io](https://jekyllthemes.io/github-pag
 ```bash
 python setup.py --prompt
 ```
+
+## Web editor (`edit.html`)
+
+The repo includes a browser-based Markdown editor (`edit.html`) that lets you update your CV without touching Git. It loads `README.md` directly from GitHub, lets you edit it with a live preview, and saves it back via the GitHub API (triggering the Action automatically).
+
+### Setup: create a GitHub Personal Access Token
+
+Go to *GitHub* → your profile photo → *Settings* → *Developer settings* → *Personal access tokens* → *Fine-grained tokens* → **Generate new token**:
+
+- **Resource owner:** your account
+- **Repository access:** Only select repositories → `cvmd-cri`
+- **Repository permissions → Contents:** `Read and write`
+
+Copy the token — you will only see it once.
+
+### Using the editor
+
+Open `https://<your-pages-url>/edit.html`. Paste the token when prompted and click **Entra**.
+
+The token is stored in `sessionStorage` for the duration of the browser session — you won't be asked again until you close the tab. It is never sent anywhere other than the GitHub API.
+
+### Local development
+
+Open `edit.html` directly in a browser (no server needed — all requests go to the external GitHub API).
 
 That's it, see ya! 👋
