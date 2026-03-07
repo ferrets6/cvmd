@@ -32,7 +32,7 @@ PROFILE_IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".webp", ".png")
 PROMPT_OUTPUT = "cv-prompt.txt"
 PLACEHOLDER_IMAGE_HASH = "25623972cfa59e57c7bf87cf57a4109a20e5fd51da9f572a31d474e6e3f92327"
 MAX_PROFILE_SIZE = 300
-OG_IMAGE = os.path.join("assets", "og-image.png")
+OG_IMAGE = os.path.join("assets", "og-image.jpg")
 OG_WIDTH, OG_HEIGHT = 1200, 630
 # Cayman theme gradient endpoints: #155799 → #159957
 OG_COLOR_LEFT  = (21,  87,  153)
@@ -129,8 +129,8 @@ def make_circular_profile(image_path):
 def generate_og_image():
     """Generate a 1200x630 og:image from the circular profile on a Cayman-gradient background.
 
-    Skipped if og-image.png already exists (user-provided image takes priority).
-    Delete og-image.png and re-run with --crop to regenerate.
+    Skipped if og-image.jpg already exists (user-provided image takes priority).
+    Delete og-image.jpg and re-run with --crop to regenerate.
     """
     if not os.path.isfile(PROFILE_IMAGE):
         print(f"  Skipping og-image — {PROFILE_IMAGE} not found.")
