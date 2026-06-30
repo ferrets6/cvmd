@@ -2,7 +2,7 @@
 // CONFIGURAZIONE
 // ===================================================
 const REPO_OWNER = 'ferrets6';
-const REPO_NAME  = 'cvmd-cri';
+const REPO_NAME  = 'cvmd';
 const FILE_PATH  = 'README.md';
 const BRANCH     = 'main';
 

@@ -69,7 +69,7 @@ The repo includes a browser-based Markdown editor (`edit.html`) that lets you up
 Go to *GitHub* → your profile photo → *Settings* → *Developer settings* → *Personal access tokens* → *Fine-grained tokens* → **Generate new token**:
 
 - **Resource owner:** your account
-- **Repository access:** Only select repositories → `cvmd-cri`
+- **Repository access:** Only select repositories → `cvmd`
 - **Repository permissions → Contents:** `Read and write`
 
 Copy the token — you will only see it once.
